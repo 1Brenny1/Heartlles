@@ -1,0 +1,37 @@
+name: Heartlles
+version: '${project.version}'
+main: me.brenny.heartlles.Heartlles
+api-version: 1.19
+author: 1Brenny1 @ Brenny.tk
+commands:
+  withdraw:
+    description: Withdraw a heart
+    usage: /<command>
+    aliases:
+      - lswithdraw
+  spawn:
+    description: Teleport to spawn
+    usage: /<command> [<player>]
+  health:
+    description: Modify a player's heart count
+    usage: /<command> <text> <player> [<integer>]
+    aliases:
+      - lshealth
+  lsgive:
+    description: Give lifesteal items
+    usage: /<command> <text> [<integer>]
+  team:
+    description: Team Functions
+    usage: /<command> <text> [<text> | <player>]
+    aliases:
+      - group
+      - teams
+  discord:
+    description: Get a link to join the discord
+    usage: /<command>
+  link:
+    description: Link your discord to your minecraft account
+    usage: /<command>
+  rtp:
+    description: Teleport to a random location
+    usage: /<command>
