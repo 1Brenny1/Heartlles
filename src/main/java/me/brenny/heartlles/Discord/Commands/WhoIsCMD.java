@@ -32,10 +32,10 @@ public class WhoIsCMD implements DiscordCMD {
                 if (MCUser != null) {
                     e.reply(Target.getAsMention() + "'s minecraft username is **" + MCUser.getName() + "**").queue();
                 } else {
-                    e.reply(Target.getName() + "'s account is not linked").queue();
+                    e.reply(Target.getAsMention() + "'s account is not linked").queue();
                 }
             } else {
-                e.reply(Target.getName() + "'s account is not linked").queue();
+                e.reply(Target.getAsMention() + "'s account is not linked").queue();
             }
         } catch (Exception _e) {
             _e.printStackTrace();
