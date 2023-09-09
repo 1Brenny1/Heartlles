@@ -15,6 +15,7 @@ public class DiscordCommands extends ListenerAdapter {
     public static void RegisterCommands() {
         DiscordMain.RegisterCMD(new InfoCMD());
         DiscordMain.RegisterCMD(new LinkCMD());
+        DiscordMain.RegisterCMD(new WhoIsCMD());
     }
 
     @Override
