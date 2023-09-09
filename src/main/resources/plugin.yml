@@ -35,3 +35,6 @@ commands:
   rtp:
     description: Teleport to a random location
     usage: /<command>
+  whois:
+    description: Get a player's discord
+    usage: /<command> <player>

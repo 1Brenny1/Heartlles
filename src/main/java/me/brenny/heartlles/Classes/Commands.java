@@ -1,9 +1,6 @@
 package me.brenny.heartlles.Classes;
 
-import me.brenny.heartlles.Commands.DiscordCMD;
-import me.brenny.heartlles.Commands.LinkCmd;
-import me.brenny.heartlles.Commands.RTPCMD;
-import me.brenny.heartlles.Commands.SpawnCMD;
+import me.brenny.heartlles.Commands.*;
 import me.brenny.heartlles.Heartlles;
 import org.bukkit.plugin.PluginManager;
 
@@ -25,5 +22,8 @@ public class Commands {
         Pl.getCommand("RTP").setExecutor(new RTPCMD());
         Pl.getCommand("RTP").setTabCompleter(new RTPCMD());
         Pm.registerEvents(new RTPCMD(), Pl);
+
+        Pl.getCommand("WhoIs").setExecutor(new WhoIsCMD());
+        Pl.getCommand("WhoIs").setTabCompleter(new WhoIsCMD());
     }
 }
