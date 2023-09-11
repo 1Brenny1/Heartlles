@@ -2,6 +2,7 @@ package me.brenny.heartlles.Discord.Commands;
 
 import me.brenny.heartlles.Discord.DiscordCMD;
 import me.brenny.heartlles.Discord.DiscordMain;
+import net.dv8tion.jda.api.events.guild.GuildJoinEvent;
 import net.dv8tion.jda.api.events.guild.GuildReadyEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -29,6 +30,13 @@ public class DiscordCommands extends ListenerAdapter {
     }
     @Override
     public void onGuildReady(@NotNull GuildReadyEvent e) {
+        List<CommandData> Commands = new ArrayList<>();
+        DiscordMain.Commands.forEach((Cmd) -> Commands.add(Cmd.getCommand()));
+        e.getGuild().updateCommands().addCommands(Commands).queue();
+    }
+
+    @Override
+    public void onGuildJoin(@NotNull GuildJoinEvent e) {
         List<CommandData> Commands = new ArrayList<>();
         DiscordMain.Commands.forEach((Cmd) -> Commands.add(Cmd.getCommand()));
         e.getGuild().updateCommands().addCommands(Commands).queue();
