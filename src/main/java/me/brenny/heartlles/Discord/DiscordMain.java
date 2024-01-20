@@ -30,7 +30,7 @@ public class DiscordMain implements net.dv8tion.jda.api.hooks.EventListener {
     }
 
     public static void Init() {
-        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault("MTE0NjA3MDYxNjM2NjEzNzM4NA.G8UwBV.jw3ibfOEsCG04Pt6pBYMk_FWEh26wDnHbgEYik");
+        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault("");
         builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
         builder.setActivity(Activity.playing("Heartlles"));
         builder.enableIntents(GatewayIntent.getIntents(GatewayIntent.ALL_INTENTS));
